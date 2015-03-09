@@ -1,0 +1,153 @@
+Question 1
+Given a sequence database, as shown in Table 3, with support threshold min-sup = 3, which of the following sequences are frequent? 
+
+
+Your Answer		Score	Explanation
+<acf>	Correct	0.25	<acf> is a subsequence of Sequences 1 and 2, so its support is 2.
+<a(bc)>	Correct	0.25	<a(bc)> is a subsequence of Sequences 1 and 2, so its support is 2.
+<ade>	Inorrect	0.00	<ade> is a subsequence of Sequence 2,4, so its support is 2.
+<abc>	Correct	0.25	<abc> is a subsequence of Sequences 1, 2, 3, and 4, so its support is 4.
+Total		0.75 / 1.00	
+Question Explanation
+
+The correct answer is: "<abc>". 
+
+
+
+
+Question 2
+Given a sequence database, as shown in Table 6, and support threshold min-sup = 3, use Generalized Sequential Patterns (GSP) to find the frequent sequential patterns. After scanning the database once, how many length-2 candidate sequences will be generated after Apriori pruning? How many length-2 candidate sequences will be generated if not using Apriori pruning? 
+
+
+Your Answer		Score	Explanation
+51; 51			
+22; 72			
+35; 51			
+None of the other options are correct.			
+72; 72	Inorrect	0.00	
+Total		0.00 / 1.00	
+Question Explanation
+
+The correct answer is: "51; 51". 
+
+Since the min-sup = 3, after scanning the database once we have the following 6 frequent items (length-1 sequential patterns): a, b, d, c, e, f. Meanwhile, we have 6 items (length-1 sequential patterns) in total, namely a, b, c, d, e, f. Therefore, the number of length-2 candidates is 6 * 6 + 6 * 5 / 2 = 51; Without Apriori pruning, the number of length 2 candidates is 6 * 6 + 6 * 5 / 2 = 51.
+Question 3
+Given a sequence database, as shown in Table 9, and support threshold min-sup = 4, use Generalized Sequential Patterns (GSP) to find the frequent sequential patterns. What is the minimum number of times we need to scan the database in order to find all the frequent sequential patterns? 
+
+
+Your Answer		Score	Explanation
+2			
+> 4			
+1			
+3	Inorrect	0.00	
+4			
+Total		0.00 / 1.00	
+Question Explanation
+
+The correct answer is: "2". 
+
+Since min-sup = 4, after scanning the database once we have the following three frequent items, a, b, d. 
+The length-2 candidate sequences are: <aa>, <ab>, <ad>, <ba>, <bb>, <bd>, <da>, <db>, <dd>, <(ab)>, <(ad)>, <(bd)>, among which the following are frequent: <ab> and <ad> 
+Note that we cannot construct length-3 candidate sequences, so we only need to scan the sequence database twice.
+Question 4
+Given a sequence database, as shown in Table 12, and min-sup = 1, which of the following does not belong to the <e>-projected database? 
+
+
+Your Answer		Score	Explanation
+<(cdeh)cfg(abe)>			
+<(_g)(adf)gh>			
+<(_h)cfg(abe)>	Correct	1.00	
+<bf(cdfgh)>			
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is: "<(_h)cfg(abe)>". 
+
+The sequences in the database are projected in the <e>-projected database as follows:
+Seq 1. <(cdeh)cfg(abe)>
+Seq 2. <>
+Seq 3. <bf(cdfgh)>
+Seq 4. <(_g)(adf)gh>
+By simple comparison, we have <(_h)cfg(abe)> does not belong to <e>-projected database.
+Question 5
+Given a sequence database, as shown in Table 13, which of the following sequential patterns are NOT closed? 
+
+
+Your Answer		Score	Explanation
+<(bc)>	Correct	0.25	<(bc)> has support 60, and of its superset <a(bc)b> also has support 60, so it is NOT closed.
+<a(bc)ba>	Inorrect	0.00	<a(bc)ba> has support 40, and none of its superset has support 40, so it is closed.
+<da(bc)bad>	Correct	0.25	<da(bc)bad> has support 20, and none of its superset has support 20, so it is closed.
+<a(bc)b>	Inorrect	0.00	<a(bc)b> has support 60, and none of its superset has support 60, so it is closed.
+Total		0.50 / 1.00	
+Question Explanation
+
+The correct answer is: "<(bc)>".
+Question 6
+In our database, we have the following three graphs: 
+
+
+
+If we set the support threshold min-sup = 3, what is the length of the longest frequent chain graph? The chain graph refers to those graphs that have nodes that are connected one-by-one. The following is an example of a length-5 chain. 
+
+
+Your Answer		Score	Explanation
+2			
+5	Correct	1.00	
+3			
+4			
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is: "5". 
+
+The bottleneck is the first graph. We can only find a length-5 chain in the first graph (no length-6 chain). A length-5 chain is available in the other two graphs as well.
+Question 7
+When we use the Apiori-based approach to find the frequent graph pattern for a candidate graph, we need to check all of its subgraphs. Given the following graph, how many distinct subgraphs with seven vertices are there? 
+
+
+Your Answer		Score	Explanation
+2	Inorrect	0.00	
+4			
+1			
+3			
+Total		0.00 / 1.00	
+Question Explanation
+
+The correct answer is: "1". 
+
+There are only four possible removes considering the connectivity. All of them are symmetric.Therefore, there is only 1 distinct subgraph with seven vertices.
+Question 8
+In our database, we have the following three graphs: 
+
+
+
+What is the support of the following graph? 
+
+
+Your Answer		Score	Explanation
+1			
+2			
+0	Inorrect	0.00	
+3			
+Total		0.00 / 1.00	
+Question Explanation
+
+The correct answer is: "1". 
+
+Only the first graph contains it. It needs two nodes with degree at least 4. Therefore, it is impossible for the last two graphs to contain it as a subgraph.
+Question 9
+Suppose we have learned two ranked rules as follows (the default is Type 2): 
+
+{“ipad”, “iphone”} → Type 1
+{“kindle”, “iphone”} → Type 2
+{“ipad”} → Type 1
+For the people who have {“ipad”, “kindle”, “iphone”}, which type will they be classified as by CBA algorithm?
+Your Answer		Score	Explanation
+Type 2			
+Type 1	Correct	1.00	
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is: "Type 1". 
+
+The first rule {“ipad”, “iphone”} → Type 1 fits the test case, so it will be classified as Type 1.
