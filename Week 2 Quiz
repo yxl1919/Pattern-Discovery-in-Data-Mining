@@ -1,0 +1,305 @@
+Question 1
+Suppose a school collected some data on students’ preference for hot dogs(HD) vs. hamburgers(HM). We have the following 2×2 contingency table summarizing the statistics. If lift is used to measure the correlation between HD and HM, what is the value for lift(HD, HM)? 
+
+ 
+
+HD
+
+¬HD
+
+Σrow
+
+HM
+
+40
+
+24
+
+64
+
+¬HM
+
+210
+
+126
+
+336
+
+Σcol
+
+250
+
+150
+
+400
+
+Your Answer		Score	Explanation
+1	Correct	1.00	
+-1			
+-∞			
+0			
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is: "1". 
+
+The lift can be calculated by 
+
+
+
+where supp(A) and supp(B) refer to the relative support of A and B respectively. Thus, 
+
+
+Question 2
+Suppose a school collected some data on students’ preference for hot dogs(HD) vs. hamburgers(HM). We have the following 2×2 contingency table summarizing the statistics. If χ2 is used to measure the correlation between HD and HM, what is the χ2 score? 
+
+ 
+
+HD
+
+¬HD
+
+Σrow
+
+HM
+
+40
+
+24
+
+64
+
+¬HM
+
+210
+
+126
+
+336
+
+Σcol
+
+250
+
+150
+
+400
+
+Your Answer		Score	Explanation
+-1			
+1			
+-∞			
+0	Correct	1.00	
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is: "0". 
+
+The contingency table with expected values is following table 
+
+ 
+
+HD
+
+¬HD
+
+Σrow
+
+HM
+
+40 (40)
+
+24 (24)
+
+64
+
+¬HM
+
+210 (210)
+
+126 (126)
+
+336
+
+Σcol
+
+250
+
+150
+
+400
+
+
+χ2 can be evaluated as follows 
+
+
+
+where Oi is the observed frequency, and Ei is the expected frequency. Since the expected values equal the observed ones, we have χ2 = 0.
+Question 3
+What is the value range of the Kulczynski measure?
+Your Answer		Score	Explanation
+[-1, 1]			
+[0, 1]	Correct	1.00	
+(-∞, +∞)			
+[0, +∞)			
+Total		1.00 / 1.00	
+Question Explanation
+
+By definition, the correct answer is: "[0, 1]".
+Question 4
+Which of the following measures is null invariant?
+Your Answer		Score	Explanation
+None of the other options are correct.			
+Lift			
+χ2			
+Kulcyzynski	Correct	1.00	
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is: "Kulcyzynski". 
+
+Null transactions are not considered in Kulcyzynski.
+Question 5
+Suppose we are interested in analyzing the transaction history of several supermarkets with respect to purchase of apples(A) and bananas(B). We have the following table summarizing the transactions. 
+
+Supermarket
+
+AB
+
+¬AB
+
+A ¬B
+
+¬A ¬B
+
+S1
+
+100,000
+
+7,000
+
+3,000
+
+300
+
+S2
+
+100,000
+
+7,000
+
+3,000
+
+90,000
+
+
+Denote li as the lift measure and ki as the Kulcyzynski measure for supermarket Si (i = 1, 2). Which of the following is correct?
+Your Answer		Score	Explanation
+l1 = l2, k1 = k2			
+l1 ≠ l2, k1 ≠ k2			
+l1 ≠ l2, k1 = k2	Correct	1.00	
+l1 = l2, k1 ≠ k2			
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is: "l1 ≠ l2, k1 = k2". 
+
+Lift is not null invariant and therefore sensitive to the number of null transactions, while Kulcyzynski is null invariant.
+Question 6
+A store had 100,000 total transactions in Q4 2014. 10,000 transactions contained eggs, while 5,000 contained bacon. 2000 transactions contained both eggs and bacon. Which of the following choices for the value of ε is the smallest such that {eggs, bacon} is considered a negative pattern under the null-invariant definition?
+Your Answer		Score	Explanation
+0.8			
+0.5			
+0.01			
+A value for ε such that {eggs, bacon} is a negative pattern by the null-invariant definition of negative patterns does not exist.	Inorrect	0.00	
+0.1			
+Total		0.00 / 1.00	
+Question Explanation
+
+The correct answer is "0.5". 
+
+
+
+For a pattern to be considered a negative pattern, it must have a value
+Question 7
+
+
+Given the itemsets in Table 1, which of the following patterns are in the δ-cluster containing the pattern {A, C, E, S} for δ = 0.0001?
+Your Answer		Score	Explanation
+{F, A, C, T, S}			
+{F, A, C, E, S}	Correct	1.00	
+{F, A, C, E, T, S}			
+{A, C, T, S}			
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is: "{F, A, C, E, S}". 
+
+All the other patterns have a distance greater than δ from the pattern {A, C, E, S}.
+Question 8
+
+
+Given the transactions in Table 2, which of the following is true? Select all that apply.
+Your Answer		Score	Explanation
+(abe) is a (2, 0.5)-robust pattern	Inorrect	0.00	
+(f) is a 0.5-core pattern of (bcf)	Correct	0.20	
+(ac) is a 0.5-core pattern of (abcef)	Correct	0.20	
+(a) is a 0.5-core pattern of (abe)	Correct	0.20	
+(abcef) is a (3, 0.5)-robust pattern	Correct	0.20	
+Total		0.80 / 1.00	
+Question Explanation
+
+The correct answers are: "(abe) is a (2, 0.5)-robust pattern", "(ac) is a 0.5-core pattern of (abcef)", "(a) is a 0.5-core pattern of (abe)", and "(f) is a 0.5-core pattern of (bcf)". 
+
+Since (e) is still a 0.5-core pattern of (abe), (abe) is a (2, 0.5)-robust pattern. By the same token, (abcef) is a (4, 0.5)-robust pattern, not a (3, 0.5)-robust pattern. (ac) is a 0.5-core pattern of (abcef) since only one other pattern contains (ac). (a) is a 0.5-core pattern of (abe) since it has a core ratio of 2/3. By the same token, (f) is a 0.5-core pattern of (bcf).
+Question 9
+A constraint is anti-monotone if an itemset S violates the constraint, so do all of its supersets. Which of following constraints is anti-monotone?
+Your Answer		Score	Explanation
+Relative support of S > 0.3	Correct	1.00	
+avg(S.price) < 10			
+range(S.price) > 10			
+sum(S.price) > 25			
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is: "Relative support of S > 0.3"
+
+Suppose X is the superset of S; if so, the following inequalities always hold for all X:
+
+Relative support of X ≤ Relative support of S
+sum(X.price) ≥ sum(S.price)
+avg(X.price) <> avg(S.price)
+range(X.price) ≥ range(S.price)
+From these inequalities, we can easily verify that relative support of S > 0.3 is anti-monotone.
+
+Question 10
+A constraint is monotone if an itemset S satisfies the constraint, so do all of its supersets. Which of following constraints is monotone?
+Your Answer		Score	Explanation
+sum(S.price) > 20	Correct	1.00	
+avg(S.price) < 10			
+min(S.price) > 10			
+Support of S > 100			
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is: "sum(S.price) > 20"
+
+Suppose X is the superset of S; if so, the following inequalities always hold for all X:
+
+support of X ≤ support of S
+min(X.price) ≤ min(S.price)
+avg(X.price) <> avg(S.price)
+sum(X.price) ≥ sum(S.price)
+From these inequalities, we can easily verify that sum(S.price) > 20 is monotone.
+
+Question 11
+A constraint is succinct if the constraint c can be enforced by directly manipulating the data. Which of following constraints is NOT succinct?
+Your Answer		Score	Explanation
+min(S.price) < 40	Inorrect	0.00	Start with only items whose price < 40 and remove transactions with high-price items only (pattern + data space pruning).
+min(S.price) > 40			
+v ∈ S			
+range(S.price) > 2			
+Total		0.00 / 1.00	
+Question Explanation
+
+The correct answer is: "range(S.price) > 2"
