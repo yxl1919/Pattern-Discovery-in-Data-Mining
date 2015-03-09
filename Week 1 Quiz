@@ -1,0 +1,162 @@
+Question 1
+Which of the following tasks does not fall under the scope of data mining? Select all that apply.
+Your Answer		Score	Explanation
+Data cleaning	Correct	0.20	
+Clustering	Correct	0.20	
+Data entry	Correct	0.20	
+Classification	Correct	0.20	
+Pattern discovery	Correct	0.20	
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answers are: "Data entry" and "Data cleaning". 
+
+"Data entry" and "Data cleaning" do not involve data analysis.
+Question 2
+Tid	Items bought
+10	Beer, Nuts, Diaper
+20	Beer, Coffee, Diaper, Nuts
+30	Beer, Diaper, Eggs
+40	Beer, Nuts, Eggs, Milk
+50	Nuts, Coffee, Diaper, Eggs, Milk
+
+Table 1: Transactions from a database.
+
+
+Given the transactions in Table 1, minsup s = 50%, and minconf c = 50%, which of the following is not a frequent itemset?
+Your Answer		Score	Explanation
+{Beer, Diaper}	Correct	0.20	
+{Beer, Eggs}	Correct	0.20	
+{Nuts, Eggs, Milk}	Correct	0.20	
+{Coffee}	Inorrect	0.00	
+{Beer}	Correct	0.20	
+Total		0.80 / 1.00	
+Question Explanation
+
+The correct answers are: "{Coffee}", "{Nuts, Eggs, Milk}", and "{Beer, Eggs}". 
+
+We only need to compute the support for each itemset since minconf only applies to association rules. 
+
+{Beer} has support 4⁄5
+{Coffee} has support 2⁄5
+{Beer, Diaper} has support 3⁄5
+{Nuts, Eggs, Milk} has support 2⁄5
+{Beer, Eggs} has support 2⁄5
+Question 3
+Tid	Items bought
+10	Beer, Nuts, Diaper
+20	Beer, Coffee, Diaper, Nuts
+30	Beer, Diaper, Eggs
+40	Beer, Nuts, Eggs, Milk
+50	Nuts, Coffee, Diaper, Eggs, Milk
+
+Table 1: Transactions from a database.
+
+
+Given the transactions in Table 1, what is the confidence and relative support of the association rule {Diaper} ⇒ {Coffee, Nuts}?
+Your Answer		Score	Explanation
+support s = 0.4, confidence c = 0.5			
+support s = 0.8, confidence c = 0.5			
+support s = 0.4, confidence c = 1	Inorrect	0.00	
+support s = 0.8, confidence c = 1			
+None of the above			
+Total		0.00 / 1.00	
+Question Explanation
+
+The correct answer is: "support s = 0.4, confidence c = 0.5"
+Question 4
+Consider the database containing the transaction T1 : {a1, a2, a3, a4, a5}, T2 : {a2, a3, a4, a5, a6}. Let minsup = 1. Which of the following is a closed frequent pattern? Select all that apply.
+Your Answer		Score	Explanation
+{a1, a2, a3, a4, a5, a6}	Correct	0.20	
+{a2, a3, a4, a5, a6}	Correct	0.20	
+{a1, a2, a3, a4, a5}	Correct	0.20	
+{a2, a3, a4, a5}	Correct	0.20	
+{a2, a5}	Correct	0.20	
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answers are: "{a2, a3, a4, a5}", "{a1, a2, a3, a4, a5}", and "{a2, a3, a4, a5, a6}". 
+
+"{a2, a5}" and "{a1, a2, a3, a4, a5, a6}" are not closed frequent patterns because "{a2, a3, a4, a5}" is a super patter of "{a2, a5}" with the same support and "{a1, a2, a3, a4, a5, a6}" has support 0, hence not a frequent pattern given minsup = 1.
+Question 5
+Consider the database containing the transactions T1 : {a1, a2, a3, a4, a5}, T2 : {a2, a3, a4, a5, a6}. Let minsup = 1. Which of the following is both a max frequent and a closed frequent pattern? Select all that apply.
+Your Answer		Score	Explanation
+{a2, a3, a4, a5, a6}	Correct	0.20	
+{a2, a5}	Correct	0.20	
+{a1, a2, a3, a4, a5}	Correct	0.20	
+{a2, a3, a4, a5}	Correct	0.20	
+{a1, a2, a3, a4, a5, a6}	Correct	0.20	
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answers are: "{a1, a2, a3, a4, a5}" and "{a2, a3, a4, a5, a6}". 
+
+Since "{a2, a3, a4, a5, a6}" and "{a2, a3, a4, a5, a6}" are frequent super patterns of "{a2, a5}" and "{a2, a3, a4, a5}", and "{a2, a5}" and "{a2, a3, a4, a5}" cannot be max frequent patterns. "{a1, a2, a3, a4, a5, a6}" has support 0, hence it is not a frequent pattern.
+Question 6
+Given the set of closed frequent patterns, we can
+Your Answer		Score	Explanation
+always recover the set of all frequent patterns and their support.	Inorrect	0.00	
+find the set of max frequent patterns.	Correct	0.25	
+recover all transactions in the database.	Correct	0.25	
+recover the set of all frequent patterns and their support in some situations but not all.	Inorrect	0.00	
+Total		0.50 / 1.00	
+Question Explanation
+
+The correct answers are: "always recover the set of all frequent patterns and their support." and "find the set of max frequent patterns.". 
+
+Since closed frequent patterns are a lossless compression of frequent patterns, "always recover the set of all frequent patterns and their support." is always achievable. We can remove all patterns that have a super pattern in the set of closed frequent patterns to find the set of max frequent patterns, hence "find the set of max frequent patterns." is always achievable.
+Question 7
+If we know the support of itemset {a, b} is 10, which of the following numbers are the possible supports of itemset {a, b, c}?
+Your Answer		Score	Explanation
+10	Correct	0.33	
+11	Correct	0.33	
+9	Correct	0.33	
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answers are: "9" and "10". 
+
+The support of {a, b, c} should be no more than 10, which is the support of the {a, b}.
+Question 8
+If we know the support of itemset {a} is 50, and the support of itemset {a, b, c} is 10, which of the following numbers are the possible supports of itemset {a, b}?
+Your Answer		Score	Explanation
+50	Correct	0.20	
+10	Correct	0.20	
+5	Correct	0.20	
+100	Correct	0.20	
+30	Correct	0.20	
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answers are: "50", "30", "10". 
+
+The support of {a, b} should be between the supports of {a} and {a, b, c}, i.e. ∈ [10, 50].
+Question 9
+Considering Apriori Algorithm, assume we have 5 items (A to E) in total. In the 1-st scan, we find out all frequent items A, B, C, and E. How many size-2 (i.e. containing 2 items, e.g. A, B) itemsets should be considered in 2-nd scan, i.e. are potential to be size-2 frequent itemsets?
+Your Answer		Score	Explanation
+10			
+6	Correct	1.00	
+4			
+25			
+Total		1.00 / 1.00	
+Question Explanation
+
+The correct answer is "6". 
+
+6 in total, i.e. AB, AC, AE, BC, BE, CE. They are all possible combinations of the 4 frequent items.
+Question 10
+
+Figure 1: FP Tree 
+
+Given the FP-tree as shown Figure 1, which of the following choices are in the f-conditional database?
+Your Answer		Score	Explanation
+{c, a, m, p} : 2	Correct	0.25	
+{b} : 1	Inorrect	0.00	
+{c, b, p} : 1	Inorrect	0.00	
+{c, a, b, m} : 1	Correct	0.25	
+Total		0.50 / 1.00	
+Question Explanation
+
+The correct answers are: "{c, a, m, p} : 2", "{c, a, b, m} : 1", and "{b} : 1". 
+
+f-conditional database in the example is actually as same as the subtree of the only node f.
