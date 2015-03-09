@@ -1,0 +1,31 @@
+Question 1
+For the task of frequent pattern mining for text data, which of the following algorithms will NOT output phrases?
+Your Answer		Score	Explanation
+TopMine			
+KERT			
+LDA	Correct	1.00	
+PDLDA			
+Total		1.00 / 1.00	
+Question 2
+Which of the following algorithms are not designed for frequent pattern mining in stream data with approximation?
+Your Answer		Score	Explanation
+FP-growth (Han, Pei & Yin, SIGMOD’00)	Correct	1.00	
+Space Saving Algorithm (Metwally et al., ICDT’05)			
+Sticky Sampling Algorithm (Manku & Motwani, VLDB’02)			
+Lossy Counting Algorithm (Manku & Motwani, VLDB’02)			
+Total		1.00 / 1.00	
+Question 3
+Which of the following algorithms are not designed for spatiotemporal and trajectory pattern mining?
+Your Answer		Score	Explanation
+Periodica (Li, Ding Han, Kays & Nye, KDD’10)			
+Swarm (Li, Ding, Han & Kays, VLDB’10)			
+CP-Miner (Li, Lu, Myagmar, Zhou, OSDI’04)	Correct	1.00	
+Splitter (Zhang, Han, Shou, Lu & La Porta, VLDB’14)			
+Total		1.00 / 1.00	
+Question 4
+Which of the following algorithms is NOT designed for privacy-preserving pattern/association rule mining?
+Your Answer		Score	Explanation
+MASK (Rizvi & Haritsa, VLDB’ 02)			
+Co-location Mining Algorithm (Huang, Shekhar & Xiong, TKDE’04)	Correct	1.00	
+Cut and paste (C&P) operator (Evfimievski, Srikant, Agrawal & Gehrke, KDD’02)			
+Total		1.00 / 1.00	
